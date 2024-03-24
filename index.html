@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUBBLE GUM</title>
+  </head>
+  <body>
+    <!-- <audio id="bgMusic" src="/musicBubbleGum.mp3"></audio> -->
+    <audio id="winChime" src="/winChime.wav"></audio>
+    <audio id="applaud" src="/applaud.wav"></audio>
+
+    <div class="flex h-screen bg-black select-none">
+      <!-- LEFT SIDE PANEL CONTROLS AND INFO -->
+      <div id="sidePanel" class="border-4 border-green-600 w-1/2 flex flex-col justify-center px-2">
+        <!-- TRAVIS.LAMBERTE.COM -->
+        <div class="flex flex-col items-center">
+        <a id="enterButton" title="Back to Arcade Menu!" href="../arcade/index.html" class="text-center text-green-600 px-4 text-2xl">TRAVIS.LAMBERTE.COM</a>
+        <h1 class="text-green-600">Guess the number of GumBalls and you win!!!</h1>
+        <h1 class="text-green-600">What do you win?!... Nothing!, but look at all those,</h1>
+        <h1 class="text-green-600">Yummy! Yummy! GumBalls!!!</h1>
+        
+      </div>
+        <!-- NAVAGATION PANE AND SCORE BOARD PANEL-->
+        <div class="flex justify-center items-center">
+
+          <!-- <h1 id="redScore" class="m-auto text-red-600 text-2xl font-bold border-4 border-red-600 rounded-full px-2">RED: 0</h1> -->
+            <div class="flex font-bold justify-center">
+              <div class="flow-root">
+                <!-- <h1 id="gameControl" class="text-center text-red-600 text-xl font-bold">RED'S TURN</h1> -->
+              </div>
+            </div>
+          <!-- <h1 id="blueScore" class="m-auto text-blue-900 text-2xl rounded-full font-bold">BLUE: 0</h1> -->
+
+        </div> <br>
+        <!-- <div class="flex flex-col items-center">
+          <a title="See Game Rules & Options!" id="buttonMenu" class="" href="../TILT3DMENU/index.html">GAME MENU</a>
+        </div><br> -->
+        <!-- GAME CONTROLS PANEL -->
+        <div class="flex flex-col items-center border-2 border-green-600 rounded-lg">
+          <h1 id="gameMessage" class="text-green-600">Enter a number between 0 and 1000.</h1>
+          <h1 id="highGuesses" class="text-green-600"></h1>
+          <h1 id="lowGuesses" class="text-green-600"></h1>
+
+          <br>
+            <input id="playerGuess" class="" placeholder="Guess GumBalls Win!!!!" type="number" name="guess" min="1">
+          <br>
+          <div class="px-8 flex flex-col items-center">
+            <button id="guessButton" title="Guess" class="font-bold border-4 text-green-600 bg-yellow-400 border-green-600 inline-block px-4 py-1 rounded-full">GUESS</button>
+          </div>
+
+          <!-- LOOKING FOR THE CLASSES FOR THE BUTTONS? - LOOK IN MAIN.JS LINE ~150 -->
+
+
+          <!-- <br>
+          <H1 class="text-white px-8">RESET: </H1> -->
+          <br>
+          <div class="px-8 flex flex-col items-center">
+            <button id="button1" title="Restack" class="font-bold border-4 text-green-600 bg-yellow-400 border-green-600 inline-block px-4 py-1 rounded-full">RESET</button>
+          </div>
+          
+
+          <br>
+        </div>
+      </div>
+      <!-- RIGHT SIDE PANEL - GAME SCREEN -->
+      <div id="canvasContainer" class="w-3/4 bg-white">
+          <canvas></canvas>
+      </div>
+    </div>
+    <script type="module" src="bubbleGum.js"></script>
+  </body>
+</html>
